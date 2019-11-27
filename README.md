@@ -1,8 +1,8 @@
 Usage:
 
-python TEN-TPLINK_PLUG-Control.py [ACTION] [IP]
+TEN-TPLINK_PLUG-Control.py [ACTION] [IP]
 
-<ACTION> can be on or off
+[ACTION] can be on or off
 
 e.g:
 
