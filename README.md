@@ -1,6 +1,6 @@
 Usage:
 
-python TEN-TPLINK_PLUG-Control.py <ACTION> <IP>
+python TEN-TPLINK_PLUG-Control.py [ACTION] [IP]
 
 <ACTION> can be on or off
 
