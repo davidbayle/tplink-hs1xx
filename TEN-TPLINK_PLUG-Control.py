@@ -1,0 +1,25 @@
+#!/usr/bin/python
+
+import socket
+import sys
+
+def main():
+    # print command line arguments
+#       print sys.argv[1]
+#       print sys.argv[2]
+        s = socket.socket()
+        host = sys.argv[2]
+        port = 9999
+        s.connect((host, port))
+        on_Signal = b'\x00\x00\x00*\xd0\xf2\x81\xf8\x8b\xff\x9a\xf7\xd5\xef\x94\xb6\xc5\xa0\xd4\x8b\xf9\x9c\xf0\x91\xe8\xb7\xc4\xb0\xd1\xa5\xc0\xe2\xd8\xa3\x81\xf2\x86\xe7\x93\xf6\xd4\xee\xdf\xa2\xdf\xa2'
+        off_Signal = b'\x00\x00\x00*\xd0\xf2\x81\xf8\x8b\xff\x9a\xf7\xd5\xef\x94\xb6\xc5\xa0\xd4\x8b\xf9\x9c\xf0\x91\xe8\xb7\xc4\xb0\xd1\xa5\xc0\xe2\xd8\xa3\x81\xf2\x86\xe7\x93\xf6\xd4\xee\xde\xa3\xde\xa3'
+
+        if sys.argv[1] == 'on' :
+                s.sendall(on_Signal)
+        elif sys.argv[1] == 'off' :
+                s.sendall(off_Signal)
+
+        s.close()
+
+if __name__ == "__main__":
+        main()
